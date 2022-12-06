@@ -137,6 +137,9 @@
     <ClInclude Include="new_car.h" />
     <ClInclude Include="old_car.h" />
   </ItemGroup>
+  <ItemGroup>
+    <Text Include="database.txt" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
