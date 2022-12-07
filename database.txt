@@ -1,1 +1,7 @@
-t2020vv Toyota Camry 2023 38000 Sedan 0 AAAt2020bb Toyota Rav4 2010 11000 SUV 133393 N/At2020cc Toyota Corolla 2007 3000 Sedan 149000 N/An2020vv Nissan Altima 2015 14000 Sedan 78000 N/An2020bb Nissan Maxima 2014 13000 Sedan 116000 N/At2020aa Toyota Camry 2022 35690 Sedan 33030 AAAt2020bb Toyota Rav4 2018 11000 SUV 133393 N/A
+t2020vv Toyota Camry 2023 38000 Sedan 0 AAA
+t2020bb Toyota Rav4 2010 11000 SUV 133393 N/A
+t2020cc Toyota Corolla 2007 3000 Sedan 149000 N/A
+n2020vv Nissan Altima 2015 14000 Sedan 78000 N/A
+n2020bb Nissan Maxima 2014 13000 Sedan 116000 N/A
+t2020aa Toyota Camry 2022 35690 Sedan 33030 AAA
+t2020bb Toyota Rav4 2018 11000 SUV 133393 N/A
