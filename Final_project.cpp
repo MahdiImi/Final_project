@@ -576,7 +576,7 @@ void addcar(int x) {
 
         ifstream read("database.txt");
         string vin1, make1, model1, category1, wp1;
-        int year1, mileage1, count{ -2 };
+        int year1, mileage1, count{-2};
         float price1;
         while (read >> vin1 >> make1 >> model1 >> year1 >> price1 >> category1 >> mileage1 >> wp1) {
             if (v == vin1) {
@@ -631,7 +631,7 @@ void addcar1(string v, int c) {
 
 
         
-    }else if (c == 1) {
+    }else if (c == -2) {
         ifstream re("database.txt");
         ofstream write("database.txt", ios::in | ios::out | ios::ate);
         string vin1, make1, model1, category1, wp1;
