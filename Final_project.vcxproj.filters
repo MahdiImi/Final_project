@@ -42,5 +42,6 @@
   <ItemGroup>
     <Text Include="database.txt" />
     <Text Include="copy.txt" />
+    <Text Include="car_on_lease.txt" />
   </ItemGroup>
 </Project>

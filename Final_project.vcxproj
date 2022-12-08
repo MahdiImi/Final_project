@@ -138,6 +138,7 @@
     <ClInclude Include="old_car.h" />
   </ItemGroup>
   <ItemGroup>
+    <Text Include="car_on_lease.txt" />
     <Text Include="copy.txt" />
     <Text Include="database.txt" />
   </ItemGroup>
