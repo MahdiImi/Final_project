@@ -64,12 +64,14 @@ void search1(int x) {
         float price1;
         string vin;
         int count = 0;
+        int c=1;
         cout << "Enter vin: ";
         cin >> vin;
         transform(vin.begin(), vin.end(), vin.begin(), ::toupper);
         ifstream read("database.txt");
         while (read >> vin1 >> make1 >> model1 >> year1 >> price1 >> category1 >>mileage1>>wp1) {
                 if (vin == vin1) {
+                    cout << "Car no: " << c<<endl;
                     old_car old_obj(vin1, make1, model1, year1, price1, category1, mileage1);
                     new_car new_obj(vin1, make1, model1, year1, price1, category1, wp1);
                     cout << "\nVin: " << new_obj.getvin() << endl;
@@ -78,8 +80,8 @@ void search1(int x) {
                     cout << "Price $: " << new_obj.getprice() << endl;
                     cout << "Category: " << new_obj.getcategory() << endl;
                     cout << "Mileage: " << old_obj.getmileage() << endl;
-                    cout << "Warranty Provider: " << new_obj.get_warrantyprovider() << endl << endl;
-                    count++;
+                    cout << "Warranty Provider: " << new_obj.get_warrantyprovider() << endl;
+                    count++; c++;
 
                 }
                 else {
@@ -113,7 +115,7 @@ void search1(int x) {
                 cout << "Price $: " << new_obj.getprice() << endl;
                 cout << "Category: " << new_obj.getcategory() << endl;
                 cout << "Mileage: " << old_obj.getmileage() << endl;
-                cout << "Warranty Provider: " << new_obj.get_warrantyprovider() << endl << endl;
+                cout << "Warranty Provider: " << new_obj.get_warrantyprovider() << endl;
                 count++;
 
             }
@@ -136,6 +138,7 @@ void search1(int x) {
         int count = 0;
         cout << "Enter model: ";
         cin >> model;
+        transform(model.begin(), model.end(), model.begin(), ::toupper);
         ifstream read("database.txt");
         while (read >> vin1 >> make1 >> model1 >> year1 >> price1 >> category1 >> mileage1 >> wp1) {
             if (model == model1) {
@@ -147,7 +150,7 @@ void search1(int x) {
                 cout << "Price $: " << new_obj.getprice() << endl;
                 cout << "Category: " << new_obj.getcategory() << endl;
                 cout << "Mileage: " << old_obj.getmileage() << endl;
-                cout << "Warranty Provider: " << new_obj.get_warrantyprovider() << endl << endl;
+                cout << "Warranty Provider: " << new_obj.get_warrantyprovider() << endl;
                 count++;
 
             }
@@ -179,7 +182,7 @@ void search1(int x) {
                 cout << "Price $: " << new_obj.getprice() << endl;
                 cout << "Category: " << new_obj.getcategory() << endl;
                 cout << "Mileage: " << old_obj.getmileage() << endl;
-                cout << "Warranty Provider: " << new_obj.get_warrantyprovider() << endl << endl;
+                cout << "Warranty Provider: " << new_obj.get_warrantyprovider() << endl;
                 count++;
 
             }
@@ -216,7 +219,7 @@ void search1(int x) {
                 cout << "Price $: " << new_obj.getprice() << endl;
                 cout << "Category: " << new_obj.getcategory() << endl;
                 cout << "Mileage: " << old_obj.getmileage() << endl;
-                cout << "Warranty Provider: " << new_obj.get_warrantyprovider() << endl << endl;
+                cout << "Warranty Provider: " << new_obj.get_warrantyprovider() << endl;
                 count++;
 
             }
@@ -239,6 +242,7 @@ void search1(int x) {
         int count = 0;
         cout << "Enter category: ";
         cin >> category;
+        transform(category.begin(), category.end(), category.begin(), ::toupper);
         ifstream read("database.txt");
         while (read >> vin1 >> make1 >> model1 >> year1 >> price1 >> category1 >> mileage1 >> wp1) {
             if (category == category1) {
@@ -250,7 +254,7 @@ void search1(int x) {
                 cout << "Price $: " << new_obj.getprice() << endl;
                 cout << "Category: " << new_obj.getcategory() << endl;
                 cout << "Mileage: " << old_obj.getmileage() << endl;
-                cout << "Warranty Provider: " << new_obj.get_warrantyprovider() << endl << endl;
+                cout << "Warranty Provider: " << new_obj.get_warrantyprovider() << endl;
                 count++;
 
             }
@@ -288,7 +292,7 @@ void search1(int x) {
                 cout << "Price $: " << new_obj.getprice() << endl;
                 cout << "Category: " << new_obj.getcategory() << endl;
                 cout << "Mileage: " << old_obj.getmileage() << endl;
-                cout << "Warranty Provider: " << new_obj.get_warrantyprovider() << endl << endl;
+                cout << "Warranty Provider: " << new_obj.get_warrantyprovider() << endl;
                 count++;
 
             }
@@ -312,7 +316,7 @@ void search1(int x) {
         cout << "Enter warranty provider or enter N/A: ";
         cin >> wp2;
         
-
+        transform(wp2.begin(), wp2.end(), wp2.begin(), ::toupper);
         ifstream read("database.txt");
         while (read >> vin1 >> make1 >> model1 >> year1 >> price1 >> category1 >> mileage1 >> wp1) {
             if (wp2==wp1) {
@@ -324,7 +328,7 @@ void search1(int x) {
                 cout << "Price $: " << new_obj.getprice() << endl;
                 cout << "Category: " << new_obj.getcategory() << endl;
                 cout << "Mileage: " << old_obj.getmileage() << endl;
-                cout << "Warranty Provider: " << new_obj.get_warrantyprovider() << endl << endl;
+                cout << "Warranty Provider: " << new_obj.get_warrantyprovider() << endl;
                 count++;
 
         }
@@ -357,6 +361,7 @@ void sell_leasecar(int x) {
         int count = 0;
         cout << "Enter vin: ";
         cin >> vin;
+        transform(vin.begin(), vin.end(), vin.begin(), ::toupper);
         ifstream read;
         string name = "database.txt";
         read.open(name);
@@ -372,7 +377,7 @@ void sell_leasecar(int x) {
                 cout << "Price $: " << new_obj.getprice() << endl;
                 cout << "Category: " << new_obj.getcategory() << endl;
                 cout << "Mileage: " << old_obj.getmileage() << endl;
-                cout << "Warranty Provider: " << new_obj.get_warrantyprovider() << endl << endl;
+                cout << "Warranty Provider: " << new_obj.get_warrantyprovider() << endl;
                 count++;
                 cout << "CAR SOLD\n\n";
             }
@@ -389,7 +394,7 @@ void sell_leasecar(int x) {
 
         const char* nm = name.c_str();
         remove(nm);
-        rename("Temp.txt", "database.txt");
+        rename("Temp.txt", nm);
 
 
     }
@@ -404,6 +409,7 @@ void sell_leasecar(int x) {
         ifstream read("database.txt");
         cout << "Enter vin: ";
         cin >> vin;
+        transform(vin.begin(), vin.end(), vin.begin(), ::toupper);
         while (read >> vin1 >> make1 >> model1 >> year1 >> price1 >> category1 >> mileage1 >> wp1) {
             if (vin == vin1 && mileage1 == 0) {
                 old_car old_obj(vin1, make1, model1, year1, price1, category1, mileage1);
@@ -415,7 +421,7 @@ void sell_leasecar(int x) {
                 cout << "Price $: " << new_obj.getprice() << endl;
                 cout << "Category: " << new_obj.getcategory() << endl;
                 cout << "Mileage: " << old_obj.getmileage() << endl;
-                cout << "Warranty Provider: " << new_obj.get_warrantyprovider() << endl << endl;
+                cout << "Warranty Provider: " << new_obj.get_warrantyprovider() << endl;
                 countf++;
                 
             }
@@ -499,6 +505,7 @@ void return_car() {
     cout << "Check for the car on lease in database\n";
     cout << "Enter vin of the leased car: ";
     cin >> vin;
+    transform(vin.begin(), vin.end(), vin.begin(), ::toupper);
     string vin1, make1, model1, category1, wp1;
     int year1, mileage1, count{0};
     float price1;
@@ -513,7 +520,7 @@ void return_car() {
             cout << "Price $: " << new_obj.getprice() << endl;
             cout << "Category: " << new_obj.getcategory() << endl;
             cout << "Mileage: " << old_obj.getmileage() << endl;
-            cout << "Warranty Provider: " << new_obj.get_warrantyprovider() << endl << endl;
+            cout << "Warranty Provider: " << new_obj.get_warrantyprovider() << endl;
             count++;
             cout << "Car Found\n";
 
@@ -627,6 +634,7 @@ void addcar(int x) {
         string v;
         cout << "Enter vin: ";
         cin >> v;
+        transform(v.begin(), v.end(), v.begin(), ::toupper);
         while (v.length() != 7) {
             cout << "wrong vin size, enter again: ";
             cin >> v;
@@ -654,6 +662,7 @@ void addcar(int x) {
         string v;
         cout << "Enter vin: ";
         cin >> v;
+        transform(v.begin(), v.end(), v.begin(), ::toupper);
         while (v.length() != 7) {
             cout << "wrong vin size, enter 7 digit vin again: ";
             cin >> v;
@@ -695,14 +704,17 @@ void addcar1(string v, int c) {
         float pricex;
         cout << "Enter make: ";
         cin >> makex;
+        transform(makex.begin(), makex.end(), makex.begin(), ::toupper);
         cout << "Enter model: ";
         cin >> modelx;
+        transform(modelx.begin(), modelx.end(), modelx.begin(), ::toupper);
         cout << "Enter year: ";
         cin >> yearx;
         cout << "Enter price: ";
         cin >> pricex;
         cout << "Enter category: ";
         cin >> categoryx;
+        transform(categoryx.begin(), categoryx.end(), categoryx.begin(), ::toupper);
         cout << "Enter mileage: ";
         cin >> mileagex;
         while (re >> vin1 >> make1 >> model1 >> year1 >> price1 >> category1 >> mileage1 >> wp1) {
@@ -727,16 +739,20 @@ void addcar1(string v, int c) {
         float pricex;
         cout << "Enter make: ";
         cin >> makex;
+        transform(makex.begin(), makex.end(), makex.begin(), ::toupper);
         cout << "Enter model: ";
         cin >> modelx;
+        transform(modelx.begin(), modelx.end(), modelx.begin(), ::toupper);
         cout << "Enter year: ";
         cin >> yearx;
         cout << "Enter price: ";
         cin >> pricex;
         cout << "Enter category: ";
         cin >> categoryx;
+        transform(categoryx.begin(), categoryx.end(), categoryx.begin(), ::toupper);
         cout << "Enter warranty provider or N/A: ";
         cin >> wpx;
+        transform(wpx.begin(), wpx.end(), wpx.begin(), ::toupper);
         while (re >> vin1 >> make1 >> model1 >> year1 >> price1 >> category1 >> mileage1 >> wp1) {
             old_car old_obj(v, makex, modelx, yearx, pricex, categoryx, mileagex);
             new_car new_obj(v, makex, modelx, yearx, pricex, categoryx, wpx);
