@@ -9,4 +9,9 @@ public:
     new_car();
     new_car(string v, string m, string mo, int y, float p, string c, string wp);
 
+
+
+
+    void addcar1(string v, int c);
 };
+

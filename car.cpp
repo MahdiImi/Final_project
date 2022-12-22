@@ -41,6 +41,9 @@ car::car(string v, string m, string mo, int y, float p, string c) {
 }
 
 
+void car::addcar1(string v, int c) {
+   cout << "nothing\n";
+}
 
 
 

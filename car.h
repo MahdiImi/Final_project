@@ -1,6 +1,7 @@
-#include<iostream>
-#include<fstream>
-#include<string>
+#include <iostream>
+#include <fstream>
+#include <string>
+#include <algorithm>
 using namespace std;
 
 
@@ -23,6 +24,8 @@ public:
 
     car();
     car(string v, string m, string mo, int y, float p, string c);
+
+    virtual void addcar1(string v, int c) = 0;              //pure virtual
 
 
 };
